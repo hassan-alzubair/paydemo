@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/toolbar_app_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_lock"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_vpn_key_black_48dp"
+            android:tint="#DDD" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_lock"
+            android:layout_centerHorizontal="true"
+            android:text="تسجيل الدخول" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/transparent_row"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_local_phone_black_24dp"
+                android:tint="#CCC" />
+
+            <EditText
+                android:id="@+id/txt_login_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/transparent_ed"
+                android:hint="رقم الهاتف"
+                android:inputType="phone"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/transparent_row"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_lock_black_24dp"
+                android:tint="#CCC" />
+
+            <EditText
+                android:id="@+id/txt_login_pin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/transparent_ed"
+                android:gravity="right"
+                android:hint="رمز التعريف الشخصي"
+                android:inputType="numberPassword"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/txt_login_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/login_btn_style"
+            android:clickable="true"
+            android:text="دخول"
+            android:textColor="#FFF" />
+
+
+        <CheckBox
+            android:id="@+id/login_remember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginRight="15dp"
+            android:text="تذكرني في المرة القادمة" />
+
+        <TextView
+            android:id="@+id/txtNewAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="تسجيل حساب جديد ؟"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/login_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</LinearLayout>

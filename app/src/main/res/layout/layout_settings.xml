@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/toolbar_app_bar" />
+
+    <RelativeLayout
+        android:id="@+id/settings_change_pin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:padding="15dp">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="تغيير رمز التعريف الشخصي"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/colorAccent" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CCC" />
+
+
+    <RelativeLayout
+        android:id="@+id/settings_notify_methods"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="طرق تلقى الإشعارات"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/colorAccent" />
+    </RelativeLayout>
+
+</LinearLayout>

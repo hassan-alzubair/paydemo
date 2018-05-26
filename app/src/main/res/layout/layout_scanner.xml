@@ -1,0 +1,54 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/coordinator"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <me.dm7.barcodescanner.zxing.ZXingScannerView
+            android:id="@+id/qr_scanner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:shouldScaleToFill="false"
+            app:squaredFinder="true" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#D6D7D7">
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_import"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_image_black_24dp"
+        android:tint="@color/colorPrimary"
+        app:backgroundTint="#D6D7D7"
+        app:fabSize="normal"
+        app:layout_anchor="@id/coordinator"
+        app:layout_anchorGravity="bottom|right" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_toggle_flash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_flash_on_black_24dp"
+        android:tint="@color/colorPrimary"
+        app:backgroundTint="#D6D7D7"
+        app:fabSize="normal"
+        app:layout_anchor="@id/coordinator"
+        app:layout_anchorGravity="bottom|left" />
+
+
+</android.support.design.widget.CoordinatorLayout>

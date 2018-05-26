@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/toolbar_app_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="80dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="100">
+
+        <RelativeLayout
+            android:id="@+id/btnTransfeer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="49.8"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/img_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingBottom="10dp"
+                android:src="@drawable/ic_camera_rear_black_80dp"
+                android:tint="#FFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_send"
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:text="تحويل"
+                android:textColor="#FFF" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:background="#BBB" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:id="@+id/btnReceive"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="49.8"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/img_receive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingBottom="10dp"
+                android:src="@drawable/ic_camera_front_black_80dp"
+                android:tint="#FFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_receive"
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:text="إستلام"
+                android:textColor="#FFF" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+
+                <TextView
+                    android:id="@+id/txtBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="0"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="60sp"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/currency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@id/txtBalance"
+                    android:paddingBottom="15dp"
+                    android:text="ج.س"
+                    android:textColor="@color/colorAccent"
+                    android:visibility="invisible" />
+
+
+                <ProgressBar
+                    android:id="@+id/progress_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!-- row -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:weightSum="100">
+
+
+                    <RelativeLayout
+                        android:id="@+id/navigate_transactions"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/nav_last_trans"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_compare_arrows_black_64dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/nav_last_trans"
+                            android:layout_centerInParent="true"
+                            android:text="التحويلات السابقة"
+                            android:textColor="#000"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/navigate_notifications"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/nav_notifications"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_notifications_black_64dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/nav_notifications"
+                            android:layout_centerInParent="true"
+                            android:text="الإشعارات"
+                            android:textColor="#000"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <!-- end row -->
+
+                <!-- row -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:weightSum="100">
+
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:id="@+id/navigate_settings"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/nav_settings"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_settings_black_24dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/nav_settings"
+                            android:layout_centerInParent="true"
+                            android:text="الإعدادات"
+                            android:textColor="#000"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/nav_unknown"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_help_outline_black_64dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/nav_unknown"
+                            android:layout_centerInParent="true"
+                            android:text="عن التطبيق"
+                            android:textColor="#000"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!-- end row -->
+
+                <!-- row -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:weightSum="100">
+
+
+                    <RelativeLayout
+                        android:id="@+id/navigate_logout"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/nav_logout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_exit_to_app_black_24dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/nav_logout"
+                            android:layout_centerInParent="true"
+                            android:text="خروج"
+                            android:textColor="#000"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:gravity="center_vertical">
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!-- end row -->
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

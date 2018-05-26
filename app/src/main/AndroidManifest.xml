@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="hassan.com.paydemo">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".Base.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon">
+        <activity android:name=".Splash.ActivitySplash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Main.ActivityMain" />
+        <activity android:name=".Login.ActivityLogin" />
+        <activity android:name=".Register.ActivityRegister">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Login.ActivityLogin" />
+        </activity>
+        <activity android:name=".Payment.ActivityPayment">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Main.ActivityMain" />
+        </activity>
+        <activity android:name=".PaymentConfirmation.ActivityPaymentConfirmation" />
+        <activity android:name=".Notifications.ActivityNotifications">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Main.ActivityMain" />
+        </activity>
+        <activity android:name=".Transactions.TransactionsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Main.ActivityMain" />
+        </activity>
+        <activity android:name=".Settings.SettingsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Main.ActivityMain" />
+        </activity>
+        <activity android:name=".ReceiveCash.ActivityReceiveCash">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Main.ActivityMain" />
+        </activity>
+
+        <receiver android:name=".NotificationService.NotificationServiceBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.hassan.demopay.NOTIFICATION_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <service android:name=".NotificationService.NotificationService" />
+    </application>
+
+</manifest>

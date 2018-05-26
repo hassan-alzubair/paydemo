@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="5dp"
+    app:cardBackgroundColor="#EEE"
+    app:cardCornerRadius="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:gravity="left"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/transaction_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="100"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:text="تحويل من حساب: "
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/transaction_row_account_from"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="60"
+                android:gravity="right" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_weight="100"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:text="الى حساب: "
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/transaction_row_account_to"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="60"
+                android:gravity="right" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_weight="100"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:text="مبلغ: "
+
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/transaction_row_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="60"
+                android:gravity="right" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_weight="100"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:text="رقم العملية: "
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/transaction_row_ref_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="60"
+                android:gravity="right"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/row_transaction_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="15dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#CCC" />
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>
+

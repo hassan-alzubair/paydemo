@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/transparent_row"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_lock_black_24dp"
+            android:tint="#CCC" />
+
+        <EditText
+            android:id="@+id/txtOldPin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/transparent_ed"
+            android:gravity="right"
+            android:hint="الرمز السابق"
+            android:inputType="number"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/transparent_row"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_lock_black_24dp"
+            android:tint="#CCC" />
+
+        <EditText
+            android:id="@+id/txtNewPin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/transparent_ed"
+            android:gravity="right"
+            android:hint="الرمز الجديد"
+            android:inputType="numberPassword"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/transparent_row"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_lock_black_24dp"
+            android:tint="#CCC" />
+
+        <EditText
+            android:id="@+id/txtNewPinAgain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/transparent_ed"
+            android:gravity="right"
+            android:hint="تكرار الرمز الجديد"
+            android:inputType="numberPassword"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
